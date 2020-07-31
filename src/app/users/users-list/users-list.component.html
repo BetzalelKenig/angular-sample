@@ -1,1 +1,27 @@
-<p>users-list works!</p>
+<div class="cntainer" >
+  <div class="row">
+    <div class="col-12 ">
+      <button class="btn btn-success">New Recipe</button>
+    </div>
+  </div>
+  <hr />
+  <div class="row">
+    <div class="card col-xs-12">
+      <a class="list-group-item clear-fix"
+      *ngFor="let userEl of users">
+          <div class="pull-left">
+              <h4 class="list-group-item-heading">
+                  {{ userEl.name }}
+              </h4>
+          </div>
+          
+      </a>
+      </div>
+    <!-- <div class="col-xs-12">
+        <app-recipe-item
+        *ngFor="let recipeEl of recipes; let i = index"
+        [recipe]="recipeEl"
+        [index]="i"></app-recipe-item>
+    </div> -->
+  </div>
+</div>

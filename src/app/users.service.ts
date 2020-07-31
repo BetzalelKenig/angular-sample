@@ -6,7 +6,9 @@ import { Subject } from "rxjs";
   providedIn: "root",
 })
 export class UsersService {
-  users: User[];
+  users: User[] = [
+    { name: "test", email: "test@test.com", password: "123456aA" },
+  ];
   usersChanged = new Subject<User[]>();
 
   constructor() {}
@@ -18,10 +20,10 @@ export class UsersService {
   getUser(id: number) {
     return this.users[id];
   }
-  
+
   addUser(user: User) {
-    this.users.push(user)
-    this.usersChanged.next(this.users)
+    this.users.push(user);
+    this.usersChanged.next(this.users);
   }
 
   updateUser(index: number, newUser: User) {
