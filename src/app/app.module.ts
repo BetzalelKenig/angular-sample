@@ -6,12 +6,11 @@ import { AppComponent } from "./app.component";
 import { FirstModule } from "./first/first.module";
 import { SecondModule } from './second/second.module';
 import { HomeComponent } from './home/home/home.component';
-import { UsersListComponent } from './users/users-list/users-list.component';
-import { UsersDetailsComponent } from './users/users-details/users-details.component';
+import { UsersModule } from './users/users.module';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, UsersListComponent, UsersDetailsComponent],
-  imports: [BrowserModule, AppRoutingModule, FirstModule, SecondModule,],
+  declarations: [AppComponent, HomeComponent, ],
+  imports: [BrowserModule, AppRoutingModule, FirstModule, SecondModule, UsersModule],
   providers: [],
   bootstrap: [AppComponent],
 })
