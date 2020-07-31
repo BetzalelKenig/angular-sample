@@ -40,5 +40,6 @@ export class UserFormComponent implements OnInit {
 
   onSubmit() {
     console.log(this.userForm);
+    this.userForm.reset()
   }
 }
