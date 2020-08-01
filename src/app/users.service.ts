@@ -7,7 +7,9 @@ import { Subject } from "rxjs";
 })
 export class UsersService {
   users: User[] = [
-    { name: "test", email: "test@test.com", password: "123456aA" },
+    { name: "test 1", email: "test@test.com", password: "123456aA" },
+    { name: "test 2", email: "test@test.com", password: "123456aA" },
+    { name: "test 3", email: "test@test.com", password: "123456aA" },
   ];
   usersChanged = new Subject<User[]>();
 

@@ -1,27 +1,33 @@
-<div class="cntainer" >
+<div class="cntainer-fluid" style="margin: 10px; ">
   <div class="row">
-    <div class="col-12 ">
-      <button class="btn btn-success">New Recipe</button>
+    <div class="col-12">
+      <h2>Registered Users</h2>
     </div>
   </div>
   <hr />
   <div class="row">
-    <div class="card col-xs-12">
-      <a class="list-group-item clear-fix"
-      *ngFor="let userEl of users">
-          <div class="pull-left">
-              <h4 class="list-group-item-heading">
-                  {{ userEl.name }}
-              </h4>
+    <div class="col-12">
+      <a
+        class="list-group-item list-group-item-action list-group-item-primary shadow p-3 mb-2  rounded"
+        *ngFor="let userEl of users"
+        style="cursor: pointer;"
+      >
+        <div class="row">
+          <div class="pull-left col-8">
+            <h4 class="list-group-item-heading">
+              {{ userEl.name }}
+            </h4>
+            <p class="list-group-item-text">{{ userEl.email }}</p>
           </div>
-          
+          <span class="col-4">
+            <img
+              src="../../../assets/generic.png"
+              class="img-responsive pull-right"
+              style="max-height: 50px;"
+            />
+          </span>
+        </div>
       </a>
-      </div>
-    <!-- <div class="col-xs-12">
-        <app-recipe-item
-        *ngFor="let recipeEl of recipes; let i = index"
-        [recipe]="recipeEl"
-        [index]="i"></app-recipe-item>
-    </div> -->
+    </div>
   </div>
 </div>
